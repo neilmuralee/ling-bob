@@ -1,0 +1,238 @@
+.header {
+    background-color: $burgundy;
+    color: $yellow;
+    height: $navHeight;
+    border-bottom: 1px solid $burgundyDarkBorder;
+    text-align: center;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    @media (min-width: $viewport-large-min) {
+        width: 320px;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        height: auto;
+        padding: 66px 42px;
+        overflow: auto;
+    }
+    @media (min-width: $viewport-xlarge-min) {
+        width: 536px;
+        padding: 66px 82px 40px;
+    }
+    a {
+        color: $yellow;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    &__mobile-toggle {
+        position: absolute;
+        border-left: 1px solid $burgundyDarkBorder;
+        &:before {
+            width: 1px;
+            height: $navHeight;
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0px;
+            background-color: $burgundyLightBorder;
+            top: 0px;
+        }
+        @media (min-width: $viewport-large-min) {
+            display: none;
+        }
+        overflow: hidden;
+        right: 0px; 
+        margin: 0px;
+        height: $navHeight;
+        padding-top: 24px;
+        cursor: pointer;
+        width: 70px;
+        &__menu,
+        &__closed {
+            position: relative;
+            left: 0px;
+            display: block;
+            text-align: center;
+            @include font-size(12px);
+        }
+ 
+        &__menu {
+            top: 0px;
+            transition: top 0.2s ease, opacity 0.5s ease;
+            opacity: 1;
+            .menu-toggle & {
+                opacity: 0;
+                top: -80px;
+                transition: top 0.2s ease, opacity 0.5s ease;
+            }
+        }
+        &__closed {
+            top: 80px;
+            opacity: 0;
+            transition: top 0.2s ease, opacity 0.5s ease;
+            .menu-toggle & {
+                top: -19px; 
+                opacity: 1;
+                transition: top 0.2s ease, opacity 0.5s ease;
+            }
+        }
+    }
+    &__slide {
+        position: fixed;
+        top: $navHeight;
+        bottom: $navHeight;
+        left: -100%;
+        right: 0px;
+        background-color: $burgundy;
+        border-top: solid 1px $burgundyLightBorder;
+        width: 100%;
+        display: table;
+        height: calc(100% - #{$navHeight});
+        table-layout: fixed;
+        transition: left 0.2s ease;
+        z-index: 99;
+        @media (min-width: $viewport-large-min) {
+            left: 0px;
+            top: auto;
+            bottom: auto;
+            position: relative;
+            height: auto;
+            display: block;
+            text-align: center;
+        }
+        &__close {
+
+        }
+        .menu-toggle & {
+            left: 0;
+            transition: left 0.2s ease;
+        }
+    }
+    &__brand {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center top;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+        &:hover {
+            opacity: 0.6;
+            transition: opacity 0.2s ease;
+        }
+        @media (max-width: $viewport-medium-max) {
+            @include background-image('logo');
+        }
+        width: 200px;
+        height: 21px;
+        text-indent: -9999em;
+        margin: 25px 15px 0px 15px;
+        box-sizing: content-box;
+        @media (min-width: $viewport-large-min) {
+            width: 236px;
+            height: 94px;
+            margin: 0px auto;
+            @include background-image('logo-desktop');
+            background-size: contain;
+            padding-bottom: 30px;
+            border-bottom: solid 1px $burgundyDarkBorder;
+        }
+        @media (min-width: $viewport-xlarge-min) {
+            width: 270px;
+            height: 107px; 
+        }
+
+    }
+    &__message {
+        display: none;
+        @media (min-width: $viewport-large-min) {
+            border-top: solid 1px $burgundyLightBorder;
+            border-bottom: solid 1px $burgundyDarkBorder;
+            display: block;
+            text-align: center;
+            @include font-size(14px);
+            padding: 35px 0px 30px;
+            // @include viewport-shallow {
+            //     padding: 20px 0px 15px;
+            // }
+            
+        }
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    &__navigation {
+        @include font-size(24px);
+        display: table-cell;
+        @media (min-width: $viewport-large-min) {
+            display: block;
+            @include font-size(18px);
+            padding: 40px 0px;
+        }
+        // @include viewport-shallow {
+        //     padding: 10px 0px;
+        // }
+        vertical-align: middle;
+        padding-bottom: 63px;
+        width: 100%;
+        text-align: center;
+        &__item {
+            padding: 10px;
+            a:hover {
+                color: darken($yellow, 10%);
+                transition: color 0.2s ease;
+            }
+            &__current {
+                a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    &__social {
+        @include font-size(18px);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        border-top: solid 1px $burgundyDarkBorder;
+        @media (min-width: $viewport-large-min) {
+            display: block;
+            position: relative;
+        }
+        ul {
+            border-top: solid 1px $burgundyLightBorder;  
+        }
+        
+        &__item {
+            display: inline-block;
+            text-indent: -9999em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+            &:hover {
+                opacity: 1;
+                transition: opacity 0.2s ease;
+            }
+            a {
+                padding: 18px 25px;
+                display: block;
+            }
+        }
+        &__facebook {
+            @include background-image('facebook');
+        }
+        &__twitter {
+            @include background-image('twitter');
+        }
+        &__instagram {
+            @include background-image('instagram');
+        }
+        &__contact {
+            @include background-image('contact');
+        }
+    }
+} 

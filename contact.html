@@ -122,9 +122,11 @@
                     </ul>
             </section>
 
+
+
             <section class="content__block content__block__contact-form ">
                 <h2 class="content__block__title ">General Enquiries</h2>
-                <form>
+            <form class="contact-form " method="post " action="mailer.php ">
                     <div class="row ">
                         <div class="col-md-6 ">
                             <label for="first_name ">First Name:</label>
@@ -137,7 +139,7 @@
                         </div>
                         <div class="col-md-6 ">
                             <label for="email ">Email address:</label>
-                            <input id="email " name="email " type="text " required>
+                            <input type="email " id="email " name="email " required>
 
                         </div>
                         <div class="col-md-6 ">
@@ -147,7 +149,7 @@
                         </div>
                         <div class="col-md-12 ">
                             <label for="enquiry ">Enquiry</label>
-                            <textarea id="enquiry " name="enquiry " ></textarea>
+                            <textarea id="enquiry " name="enquiry " required></textarea>
                         </div>
                         <div class="col-md-12 ">
                             <button class="icon-link icon-link__gallery ">
@@ -158,6 +160,7 @@
                         </div>
                     </div>
                 </form>
+                <div class="contact-form__message "></div>
         </section>
 
         <section class="content__block content__block__section content__block__section__team ">

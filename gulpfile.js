@@ -92,6 +92,13 @@ gulp.task('minify-html', function() {
         spare: true
     };
 
+    gulp.src('./*.php')
+        .pipe(minifyHTML(opts))
+        .pipe(gulp.dest('dist/'))
+        .pipe(reload({
+            stream: true
+        }));
+
     gulp.src('./*.html')
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest('dist/'))
@@ -110,6 +117,7 @@ gulp.task('watch', function() {
     gulp.watch('scss/**/*.scss', ['scss']);
     gulp.watch('js/**/*.js', ['jshint', 'js']);
     gulp.watch('./*.html', ['minify-html']);
+    gulp.watch('./*.php', ['minify-html']);
     gulp.watch('img/*', ['imgmin']);
 });
 
