@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>contact</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HomePage_Phone" transform="translate(-206.000000, -535.000000)" fill="#C3AA5B">
+            <g id="Social" transform="translate(0.000000, 514.000000)">
+                <g transform="translate(95.000000, 19.000000)" id="contact">
+                    <path d="M111.945455,2.375 L111.945455,16.625 L131,16.625 L131,2.375 L111.945455,2.375 L111.945455,2.375 Z M129.029442,3.95833333 L121.472727,10.0644583 L113.916012,3.95833333 L129.029442,3.95833333 L129.029442,3.95833333 Z M113.533333,15.0416667 L113.533333,5.68654167 L121.472727,12.1022083 L129.412121,5.68654167 L129.412121,15.0416667 L113.533333,15.0416667 L113.533333,15.0416667 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

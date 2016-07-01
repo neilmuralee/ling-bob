@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://use.typekit.net/ejj1lnx.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <span class="header__mobile-toggle" data-toggle="menu-toggle">
+            <span class="header__mobile-toggle__menu">Menu</span>
+        <span class="header__mobile-toggle__closed">Close</span>
+        </span>
+
+        <a href="/" class="header__brand" title="Home page">
+            Ling Bob Stables
+        </a>
+        <div class="header__message">
+            We provide the finest contemporary stables and livery services in Horsforth, just outside of Leeds.
+        </div>
+
+        <div class="header__slide">
+            <nav class="header__navigation">
+                <ul>
+                    <li class="header__navigation__item header__navigation__item__home"><a href=" / ">Home</a></li>
+                    <li class="header__navigation__item header__navigation__item__about"><a href="about.html " title="About Us">About Us</a></li>
+                    <li class="header__navigation__item header__navigation__item__contact  header__navigation__item__current "><a href="contact.html " title="Contact Us">Contact</a></li>
+                    <li class="header__navigation__item header__navigation__item__gallery "><a href="gallery.html " title="Gallery">Gallery</a></li>
+                </ul>
+            </nav>
+            <div class="header__social ">
+                <ul>
+                    <li class="header__social__item header__social__facebook "><a href="# " title="Ling Bob Stables on Facebook">Facebook</a></li>
+                    <li class="header__social__item header__social__twitter "><a href="# " title="Ling Bob Stables on Twitter">Twitter</a></li>
+                    <li class="header__social__item header__social__instagram "><a href="# " title="Ling Bob Stables on Instagram">Instagram</a></li>
+                    <li class="header__social__item header__social__contact "><a href="contact.html" title="Contact Ling Bob Stables">Contact</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <main class="content " role="main ">
+
+        <div class="map">
+            <div class="map-view" id="map" style="min-height: 300px; margin-bottom: 15px;"></div>
+            <script>
+                function initMap() {
+                    var title = "Our address"
+                    var location = {
+                        lat: 53.85422,
+                        lng: -1.64053
+                    };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: location,
+                        mapTypeControl: false,
+                        zoomControl: true,
+                        scaleControl: true,
+                        scrollwheel: false,
+                        streetViewControl: true,
+                        draggable: !("ontouchend" in document)
+                    });
+
+                    google.maps.event.addDomListener(window, 'resize', function() {
+                        map.setCenter(location);
+                    });
+
+                    // Pin
+                    var markerImageDetect = (window.devicePixelRatio > 1.5) ? 'img/google-map-pin@2x.png' : '/img/google-map-pin.png';
+                    var markerImage = new google.maps.MarkerImage(markerImageDetect, null, null, null, new google.maps.Size(54, 54));
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        title: title,
+                        icon: markerImage
+                    });
+
+                    marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                    });
+
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZSeqgOK32zxfbC7OgNFDrLEEM_GWuoOs&callback=initMap" async defer></script>
+
+            <section class="content__block content__block__section">
+                <h1 class="content__block__title">Contact Information</h1>
+                <ul class="contact-details">
+                    <li class="contact-details__item contact-details__phone">
+                        <a href="tel:07822282322">07822 282322</a>
+                    </li>
+                    <li class="contact-details__item contact-details__email">
+                        <a href=mailto:john@lingbobstables.com ">john@lingbobstables.com</a>
+                        </li>
+                        <li class="contact-details__item contact-details__address ">
+                            GMTMA Limited, Beech House, Scotland Lane, Horsforth, Leeds, LS18 5HH. - <a <a href="https://maps.google.com?saddr=Current+Location&daddr=Beech+House+Scotland+Lane+Horsforth+Leeds+LS18+5HH ">Get Directions</a>
+                            
+                        </li>
+                    </ul>
+            </section>
+
+            <section class="content__block content__block__contact-form ">
+                <h2 class="content__block__title ">General Enquiries</h2>
+                <form>
+                    <div class="row ">
+                        <div class="col-md-6 ">
+                            <label for="first_name ">First Name:</label>
+                            <input id="first_name " name="first_name " type="text " required>
+                        </div>
+                        
+                        <div class="col-md-6 ">
+                            <label for="last_name ">Last name:</label>
+                            <input id="last_name " name="last_name " type="text " required>
+                        </div>
+                        <div class="col-md-6 ">
+                            <label for="email ">Email address:</label>
+                            <input id="email " name="email " type="text " required>
+
+                        </div>
+                        <div class="col-md-6 ">
+                            <label for="phone ">Phone number:</label>
+                            <input id="phone " name="phone " type="text " >
+
+                        </div>
+                        <div class="col-md-12 ">
+                            <label for="enquiry ">Enquiry</label>
+                            <textarea id="enquiry " name="enquiry " ></textarea>
+                        </div>
+                        <div class="col-md-12 ">
+                            <button class="icon-link icon-link__gallery ">
+                                <span>
+                                Submit
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+        </section>
+
+        <section class="content__block content__block__section content__block__section__team ">
+            <h2 class="content__block__title ">For Business Enquiries</h2>
+            
+        <div class="row content__block__section__team__member ">
+            <div class="col-xs-12 col-sm-4 col-lg-3 ">
+                <picture class="content__img content__block__section__team__img ">
+                    <img src="img/about-team-1.jpg " srcset="img/about-team-1@2x.jpg 2x " alt=" ">
+                </picture>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-lg-9 ">
+                <h3 class="content__block__section__team__title ">John Smith</h3>
+                <p class="content__block__section__team__role ">Stable Assistant</p>
+                <ul class="contact-details ">
+                    <li class="contact-details__item contact-details__phone ">
+                        <a href="tel:07822282322 ">07822 282322</a>
+                    </li>
+                    <li class="contact-details__item contact-details__email ">
+                        <a href=mailto:john@lingbobstables.com ">john@lingbobstables.com</a>
+                    </li>
+                </ul>
+        </div>
+        </div>
+
+        </section>
+
+        <footer class="content__block content__block__footer ">
+            <a href="gallery.html " class="icon-link icon-link__gallery ">
+                <span>
+                   View Gallery
+                </span>
+            </a>
+        </footer>
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js "></script>
+    <script>
+        window.jQuery || document.write('<script src="/js/lib/jquery.min.js "><\/script>')
+    </script>
+    <script src="js/main.js "></script>
+</body>
+
+</html>

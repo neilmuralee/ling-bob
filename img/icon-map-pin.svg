@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-map-pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="About-Us" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AboutUs_Phone" transform="translate(-31.000000, -643.000000)" fill="#C3BE66">
+            <g id="Content" transform="translate(-85.000000, 42.000000)">
+                <g id="Group-3" transform="translate(103.000000, 591.000000)">
+                    <path d="M20.3030303,10.3030303 C16.9637121,10.3030303 13.9393939,13.0529293 13.9393939,16.4460606 C13.9393939,19.8383838 16.6988258,23.8884848 20.3030303,29.6969697 C23.9072348,23.8884848 26.6666667,19.8383838 26.6666667,16.4460606 C26.6666667,13.0529293 23.6431439,10.3030303 20.3030303,10.3030303 L20.3030303,10.3030303 Z M20.3030303,19.1919192 C18.9849621,19.1919192 17.9166667,18.1066667 17.9166667,16.7676768 C17.9166667,15.4286869 18.9849621,14.3434343 20.3030303,14.3434343 C21.6210985,14.3434343 22.6893939,15.4286869 22.6893939,16.7676768 C22.6893939,18.1066667 21.6210985,19.1919192 20.3030303,19.1919192 L20.3030303,19.1919192 Z" id="icon-map-pin"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
