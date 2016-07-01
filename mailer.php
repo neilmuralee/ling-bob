@@ -8,7 +8,7 @@
         $last_name = strip_tags(trim($_POST["last_name"]));
 		$last_name = str_replace(array("\r","\n"),array(" "," "),$last_name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $enquiry = trim($_POST["phone"]);
+        $phone = trim($_POST["phone"]);
         $enquiry = trim($_POST["enquiry"]);
 
         // Check that data was sent to the mailer.
@@ -21,10 +21,10 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "neil@paperbomb.com";
+        $recipient = "contactme@iamgaz.co.uk";
 
         // Set the email subject.
-        $subject = "Ling Bob website message from $first_tname $last_name";
+        $subject = "Ling Bob website message from $first_name $last_name";
 
         // Build the email content.
         $email_content = "Name: $first_name $last_name\n";

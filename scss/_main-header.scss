@@ -3,10 +3,13 @@
     color: $yellow;
     height: $navHeight;
     border-bottom: 1px solid $burgundyDarkBorder;
-    text-align: center;
+    text-align: left;
     position: fixed;
     z-index: 99;
     width: 100%;
+    @media (min-width: $viewport-medium-min) {
+        text-align: center;
+    }
     @media (min-width: $viewport-large-min) {
         width: 320px;
         position: fixed;

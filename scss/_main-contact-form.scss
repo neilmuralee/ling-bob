@@ -1,3 +1,8 @@
 .contact-form {
-    
-}
+    transition: height 1s ease;
+    &.hidden {
+        overflow: hidden;
+        height: 0px;
+        transition: height 1s ease;
+    }
+} 
