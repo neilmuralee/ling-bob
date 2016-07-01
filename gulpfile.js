@@ -30,7 +30,7 @@ gulp.task('scss', function() {
         this.emit('end');
     };
 
-    return gulp.src('scss/main.scss')
+    return gulp.src('/source/scss/main.scss')
         .pipe(plumber({
             errorHandler: onError
         }))
@@ -67,7 +67,7 @@ gulp.task('deploy', function() {
 });
 
 gulp.task('js', function() {
-    gulp.src('js/**/*.js')
+    gulp.src('/source/js/**/*.js')
         .pipe(uglify())
         .pipe(size({
             gzip: true,
@@ -81,7 +81,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('scss-lint', function() {
-    gulp.src('scss/**/*.scss')
+    gulp.src('/source/scss/**/*.scss')
         .pipe(cache('scsslint'))
         .pipe(scsslint());
 });
@@ -92,14 +92,14 @@ gulp.task('minify-html', function() {
         spare: true
     };
 
-    gulp.src('./*.php')
+    gulp.src('/source/./*.php')
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest('dist/'))
         .pipe(reload({
             stream: true
         }));
 
-    gulp.src('./*.html')
+    gulp.src('/source/./*.html')
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest('dist/'))
         .pipe(reload({
@@ -108,21 +108,21 @@ gulp.task('minify-html', function() {
 });
 
 gulp.task('jshint', function() {
-    gulp.src('js/**/*.js')
+    gulp.src('/source/js/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('scss/**/*.scss', ['scss']);
-    gulp.watch('js/**/*.js', ['jshint', 'js']);
-    gulp.watch('./*.html', ['minify-html']);
-    gulp.watch('./*.php', ['minify-html']);
-    gulp.watch('img/*', ['imgmin']);
+    gulp.watch('/source/scss/**/*.scss', ['scss']);
+    gulp.watch('/source/js/**/*.js', ['jshint', 'js']);
+    gulp.watch('/source/./*.html', ['minify-html']);
+    gulp.watch('/source/./*.php', ['minify-html']);
+    gulp.watch('/source/img/*', ['imgmin']);
 });
 
 gulp.task('imgmin', function() {
-    return gulp.src('img/*')
+    return gulp.src('/source/img/*')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{
