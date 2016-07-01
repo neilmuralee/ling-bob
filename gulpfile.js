@@ -53,18 +53,6 @@ gulp.task('scss', function() {
         .pipe(gulp.dest('dist/css'))
 });
 
-var fileinclude = require('gulp-file-include'),
-    gulp = require('gulp');
-
-gulp.task('fileinclude', function() {
-    gulp.src(['index.html'])
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file'
-        }))
-        .pipe(gulp.dest('./'));
-});
-
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
@@ -137,4 +125,4 @@ gulp.task('imgmin', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', ['browser-sync', 'fileinclude', 'js', 'imgmin', 'minify-html', 'scss', 'watch']);
+gulp.task('default', ['browser-sync', 'js', 'imgmin', 'minify-html', 'scss', 'watch']);
