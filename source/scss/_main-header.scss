@@ -137,7 +137,6 @@
             @include background-image('logo-desktop');
             background-size: contain;
             padding-bottom: 30px;
-            border-bottom: solid 1px $burgundyDarkBorder;
         }
         @media (min-width: $viewport-xlarge-min) {
             width: 270px;
@@ -154,6 +153,16 @@
             text-align: center;
             @include font-size(14px);
             padding: 35px 0px 30px;
+            position: relative;
+            &:before {
+                height: 1px;
+                content: "";
+                display: block;
+                background: $burgundyDarkBorder;
+                position: absolute;
+                top: -2px;
+                width: 100%;
+            }
             // @include viewport-shallow {
             //     padding: 20px 0px 15px;
             // }
